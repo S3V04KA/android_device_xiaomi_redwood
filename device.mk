@@ -8,7 +8,7 @@
 TARGET_NFC_SUPPORTED_SKUS := redwood
 
 # Run the script before copying files
-$(shell bash vendor/xiaomi/redwood-miuicamera/vendorsetup.sh)
+# $(shell bash vendor/xiaomi/redwood-miuicamera/vendorsetup.sh)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, vendor/xiaomi/redwood/redwood-vendor.mk)
 $(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
 # MIUI Camera
-$(call inherit-product-if-exists, vendor/xiaomi/redwood-miuicamera/device.mk)
+# $(call inherit-product-if-exists, vendor/xiaomi/redwood-miuicamera/device.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -163,7 +163,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-threads=8
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+# $(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
